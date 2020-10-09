@@ -1,0 +1,22 @@
+body {
+    padding: 0;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: black;
+    background: lightgray;
+}
+
+::selection {
+    color: black;
+    background: lightgray;
+}
+
+a.nav-link{
+    margin: 0em 2em 0em 2em !important;
+}
+
+input, select, .fas{
+    margin: 1em 0em 1em 0em !important;
+}
