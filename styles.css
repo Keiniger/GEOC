@@ -13,6 +13,10 @@ body {
     background: lightgray;
 }
 
+h1{
+    font-size: 6em;
+}
+
 a.nav-link{
     margin: 0em 2em 0em 2em !important;
 }
