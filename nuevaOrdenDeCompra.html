@@ -46,8 +46,54 @@
 
 
     <div class="container" style="margin-top:2em; display:flex">
-        
+        <div class="col">
+            <h2>Añadir Orden de Compra</h2>
+            <hr style="margin-top: 2em;">
+            <div style="display: flex; align-items: center; flex-wrap: wrap;">
+                <div class="col" style="flex-grow: 10;">
+                    <form class="form-horizontal" action="#">
+                        <div class="form-group">
+
+                            <h4>Elegir proveedor</h4>
+                                <select name="proveedor" class="form-control" id="sel1" placeholder="Proveedores" width="50%">
+                                    <option>Proveedor</option>
+                                    <option value="franco">Franco</option>
+                                    <option value="giuliana">Giuli</option>
+                                    <option value="nacho">Nacho</option>
+                                    <option value="mati">Matias</option>
+                                </select>
+                        </div>
+                        <hr style="border-top: 1px dashed; color: lightgray;">
+                        <br>
+                    </form>
+                
+                    <form>
+                        <div class="form-group">
+                            <div style="display: inline-block; width: 70%;">
+                                <h5>Elegir producto</h5>
+                                <select name="proveedor" class="form-control" id="sel1" placeholder="Productos" >
+                                    <option>Producto</option>
+                                    <option>Paquete de galletitas de 150gr</option>
+                                    <option>Paquete de galletitas de 400gr</option>
+                                    <option>Paquete de galletitas de 700gr</option>
+                                </select>
+                            </div>
+                            <div style="display: inline-block; width: 10%;">
+                                <input type="number" class="form-control" id="cantidad" placeholder="Cantidad" >
+                            </div>
+                        </div>
+                        <hr style="border-top: 1px dashed; color: lightgray;">
+                    </form>
+                </div>
+            </div>
+
+        </div>  
     </div>
+
+    <div style="text-align: center;">
+        <input type="submit" value="Crear Orden de Compra">
+    </div>  
+
     </div>
     </div>
     </div>
