@@ -26,9 +26,13 @@ input, select{
 }
 
 .fas {
-    margin-top: 6px;
     margin-right: 10px;
 }
+
+a.fas{
+    margin-top: 200px;
+}
+
 
 hr.normal {
     margin-top: 2em;
