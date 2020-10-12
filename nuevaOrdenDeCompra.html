@@ -8,8 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
@@ -46,7 +46,7 @@
     <div class="container" style="margin-top:2em; display:flex">
         <div class="col">
             <h2>Añadir Orden de Compra</h2>
-            <hr style="margin-top: 2em;">
+            <hr class="normal">
             <div style="display: flex; align-items: center; flex-wrap: wrap;">
                 <div class="col" style="flex-grow: 10;">
                     <form class="form-horizontal" action="#">
@@ -62,7 +62,7 @@
                                 <option value="mati">Matias</option>
                             </select>
                         </div>
-                        <hr style="border-top: 1px dashed; color: lightgray;">
+                        <hr class="dashed">
                         <br>
                     </form>
 
@@ -77,11 +77,11 @@
                                     <option>Paquete de galletitas de 700gr</option>
                                 </select>
                             </div>
-                            <div style="display: inline-block; width: 10%;">
+                            <div style="display: inline-block; width: 15%;">
                                 <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
                             </div>
                         </div>
-                        <hr style="border-top: 1px dashed; color: lightgray;">
+                        <hr class="dashed">
                     </form>
                 </div>
             </div>
@@ -90,7 +90,7 @@
     </div>
 
     <div style="text-align: center;">
-        <input type="submit" class="btn btn-secondary" value="Crear Orden de Compra">
+        <input type="submit" class="btn btn-dark" value="Crear Orden de Compra">
     </div>
 
     </div>

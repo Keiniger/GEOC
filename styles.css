@@ -24,3 +24,40 @@ a.nav-link{
 input, select, .fas{
     margin: 1em 0em 1em 0em !important;
 }
+
+hr.normal {
+    margin-top: 2em;
+    border-top: 1px solid;
+    color: gray;
+}
+
+hr.dashed {
+    border-top: 1px dashed;
+    color: gray;
+}
+
+th {
+    color: lightgray;
+}
+
+.caja-compra {
+    border: 2px;
+    border-style: solid;
+    border-radius: 7px;
+    margin: 40px 100px 40px 100px; 
+    padding: 3% 10px 3% 10px;
+}
+
+input[type],
+input[type=text]:focus,
+input[type=text]:checked,
+input[type=text]::selection,
+input:-internal-autofill-selected,
+select, 
+select:focus, 
+select::selection,
+option[value], 
+.form-control {
+    background-color:#3a3f44 !important;
+    color: lightgray !important;
+}
