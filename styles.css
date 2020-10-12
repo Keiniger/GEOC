@@ -18,7 +18,7 @@ h1{
 }
 
 a.nav-link{
-    margin: 0em 2em 0em 2em !important;
+    padding: 1em 2em 1em 2em !important;
 }
 
 input, select, .fas{
