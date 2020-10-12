@@ -93,9 +93,15 @@
                 </div>
             </div>
 
-            <div style="text-align: center;">
-                <input type="submit" class="btn btn-dark" value="Crear Orden de Compra">
-            </div>
+            <div class="container" style="text-align: center;">
+                <a href="#" class="btn btn-secondary" data-toggle="popover" data-trigger="hover" title="Logica" data-content="Aca iria la lógica">Crear Orden de Compra</a>
+              </div>
+              
+              <script>
+              $(document).ready(function(){
+                $('[data-toggle="popover"]').popover();   
+              });
+              </script>
         </div>
     </div>
 
