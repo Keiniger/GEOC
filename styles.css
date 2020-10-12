@@ -21,8 +21,13 @@ a.nav-link{
     padding: 1em 2em 1em 2em !important;
 }
 
-input, select, .fas{
+input, select{
     margin: 1em 0em 1em 0em !important;
+}
+
+.fas {
+    margin-top: 6px;
+    margin-right: 10px;
 }
 
 hr.normal {
