@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="scripts.js"></script>
 </head>
 
 <body>
@@ -30,10 +31,12 @@
                     <a class="nav-link" href="./index.html"> <i class="fas fa-boxes"></i><b> Productos </b> </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./ordenesDeCompra.html"><i class="fas fa-cash-register"></i>Ordenes de compra</a>
+                    <a class="nav-link" href="./ordenesDeCompra.html"><i class="fas fa-cash-register"></i>Ordenes de
+                        compra</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./nuevaOrdenDeCompra.html"><i class="fas fa-cart-plus"></i>Nueva orden de compra</a>
+                    <a class="nav-link" href="./nuevaOrdenDeCompra.html"><i class="fas fa-cart-plus"></i>Nueva orden de
+                        compra</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./registros.html"><i class="fas fa-clipboard-list"></i>Registros</a>
@@ -81,39 +84,39 @@
                 <br>
             </div>
 
-
             <div class="col">
                 <h2>Añadir/quitar productos</h2>
                 <hr class="normal">
                 <div style="display: flex; align-items: center; flex-wrap: wrap;">
                     <div class="col" style="flex-grow: 10;">
-                        <form class="form-horizontal" action="#">
+                        <form class="form-horizontal">
                             <div class="form-group">
 
-                                <input type="text" class="form-control" id="prducto"
-                                    placeholder="Ingrese el código del producto aquí" name="text">
+                                <input type="number" class="form-control" id="productoCodigo"
+                                    placeholder="Ingrese el código del producto aquí">
 
-                                <input type="text" class="form-control" id="prducto"
-                                    placeholder="Ingrese la descripción del producto aquí" name="text">
+                                <input type="text" class="form-control" id="productoDescripcion"
+                                    placeholder="Ingrese la descripción del producto aquí">
 
-                                <select class="form-control" id="sel1" placeholder="Categoría" width="50%">
+                                <select class="form-control" id="productoCategoria" placeholder="Categoría" width="50%">
                                     <option>Categoría</option>
                                     <option>Galletitas</option>
                                     <option>Postres</option>
                                     <option>Gaseosas</option>
                                 </select>
 
-                                <input type="text" class="form-control" id="producto"
-                                    placeholder="Ingrese el nombre del proveedor aquí" name="text">
+                                <input type="text" class="form-control" id="productoProveedor"
+                                    placeholder="Ingrese el nombre del proveedor aquí">
 
-                                <input type="text" class="form-control" id="producto"
+                                <input type="number" class="form-control" id="productoStockMin"
                                     placeholder="Ingrese el Stock mínimo del producto aquí" name="text">
 
                             </div>
                         </form>
                     </div>
                     <div class="col text-center">
-                        <a type="submit" data-toggle="popover" data-trigger="hover" title="" data-content="Aca iria la lógica" data-original-title="Logica" style="margin-top: 8px;">
+                        <a onclick="agregarFila()" type="submit" data-toggle="popover" data-trigger="hover"
+                        data-content="Aca iria la lógica" data-original-title="Logica" style="margin-top: 8px;">
                             <i class="fas fa-plus-circle h1"></i>
                         </a>
                     </div>
@@ -134,21 +137,14 @@
                     </div>
 
                     <div class="col text-center">
-                        <a type="submit" data-toggle="popover" data-trigger="hover" title="" data-content="Aca iria la lógica" data-original-title="Logica" style="margin-top: 8px;">
+                        <a type="submit" data-toggle="popover" data-trigger="hover"
+                            data-content="Aca iria la lógica" data-original-title="Logica" style="margin-top: 8px;">
                             <i class="fas fa-trash-alt h1"></i>
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
-
-        <script>
-            $(document).ready(function(){
-              $('[data-toggle="popover"]').popover();   
-            });
-        </script>
-
     </div>
     </div>
     </div>
