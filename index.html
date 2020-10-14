@@ -49,43 +49,7 @@
     <div class="container" style="margin-top:2em; display:flex">
         <div class="row">
             <div class="col">
-                <h2>Listado</h2>
-                <hr class="normal" style="margin-bottom: 2em;">
-                <table class="table table-hover table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Código GTIN 13</th>
-                            <th>Descripción</th>
-                            <th>Cantidad</th>
-                            <th>Empresa proveedora</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>0001</td>
-                            <td>Paquete de galletitas de 400gr</td>
-                            <td>100</td>
-                            <td>ArCor</td>
-                        </tr>
-                        <tr>
-                            <td>0001</td>
-                            <td>Paquete de galletitas de 150gr</td>
-                            <td>100</td>
-                            <td>ArCor</td>
-                        </tr>
-                        <tr>
-                            <td>0001</td>
-                            <td>Paquete de galletitas de 700gr</td>
-                            <td>100</td>
-                            <td>ArCor</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br>
-            </div>
-
-            <div class="col">
-                <h2>Añadir/quitar productos</h2>
+                <h2>Añadir productos</h2>
                 <hr class="normal">
                 <div style="display: flex; align-items: center; flex-wrap: wrap;">
                     <div class="col" style="flex-grow: 10;">
@@ -121,28 +85,62 @@
                         </a>
                     </div>
                 </div>
+            </div>
 
-                <hr class="dashed">
+            <div class="col">
+                <h2>Listado</h2>
+                <hr class="normal" style="margin-bottom: 2em;">
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Código GTIN 13</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Empresa proveedora</th>
+                            <th>Borrar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0001</td>
+                            <td>Paquete de galletitas de 400gr</td>
+                            <td>100</td>
+                            <td>ArCor</td>
+                            <td>
+                                <a onclick="borrarProducto()" type="submit" data-toggle="popover" data-trigger="hover"
+                                data-content="Aca iria la lógica" data-original-title="Logica">
+                                    <i class="fas fa-trash-alt h2" style="margin: 30% 30% 30% 30%;"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>Paquete de galletitas de 150gr</td>
+                            <td>100</td>
+                            <td>ArCor</td>
+                            <td>
+                                <a onclick="borrarProducto()" type="submit" data-toggle="popover" data-trigger="hover"
+                                data-content="Aca iria la lógica" data-original-title="Logica">
+                                    <i class="fas fa-trash-alt h2" style="margin: 30% 30% 30% 30%;"></i>
+                                </a>
+                            </td>
 
-                <div style="display: flex; align-items: center; flex-wrap: wrap;">
-                    <div class="col" style="flex-grow: 10;">
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" placeholder="Categoría" width="50%">
-                                <option>Producto</option>
-                                <option>Paquete de galletitas de 150gr</option>
-                                <option>Paquete de galletitas de 400gr</option>
-                                <option>Paquete de galletitas de 700gr</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col text-center">
-                        <a type="submit" data-toggle="popover" data-trigger="hover"
-                            data-content="Aca iria la lógica" data-original-title="Logica" style="margin-top: 8px;">
-                            <i class="fas fa-trash-alt h1"></i>
-                        </a>
-                    </div>
-                </div>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>Paquete de galletitas de 700gr</td>
+                            <td>100</td>
+                            <td>ArCor</td>
+                            <td>
+                                <a onclick="borrarProducto()" type="submit" data-toggle="popover" data-trigger="hover"
+                                data-content="Aca iria la lógica" data-original-title="Logica">
+                                    <i class="fas fa-trash-alt h2" style="margin: 30% 30% 30% 30%;"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
             </div>
         </div>
     </div>

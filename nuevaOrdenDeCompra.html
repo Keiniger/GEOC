@@ -80,22 +80,20 @@
                                     </select>
                                 </div>
                             </div>
-                            <div style="display: inline-block; width: 15%;">
+                            <div style="display: inline-block; width: 15%; margin-right:58px;">
                                 <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
                             </div>
-                            <div class="col text-center">
-                                <a onclick="agregarProducto()" type="submit" data-toggle="popover" data-trigger="hover" title="Logica" data-content="Aca iria la lógica" style="margin-top: 8px;">
-                                    <i class="fas fa-plus-circle h1"></i>
-                                </a>
-                            </div>
                         </div>
-                        <hr  id="nuevoProducto" class="dashed">
+                        <a class="col text-center" id="nuevoProducto" onclick="agregarProducto()" type="submit" style="margin: 8px 0px 0px 8px;">
+                            <i class="fas fa-plus-circle h1"></i>
+                        </a>
+                        <hr class="dashed">
                     </form>
                 </div>
             </div>
 
             <div class="container" style="text-align: center;">
-                <a href="#" class="btn btn-secondary" data-toggle="popover" data-trigger="hover" title="Logica" data-content="Aca iria la lógica">Crear Orden de Compra</a>
+                <a onclick="ordenDeCompraCreada()" href="#" class="btn btn-secondary" data-toggle="popover" data-trigger="hover" title="Logica" data-content="Aca iria la lógica">Crear Orden de Compra</a>
               </div>
         </div>
     </div>

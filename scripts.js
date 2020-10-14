@@ -14,11 +14,19 @@ function agregarFila() {
     var cel2 = newRow.insertCell(1);
     var cel3 = newRow.insertCell(2);
     var cel4 = newRow.insertCell(3);
+    var cel5 = newRow.insertCell(4);
 
     cel1.innerHTML = codigo;
     cel2.innerHTML = descripcion;
     cel3.innerHTML = 0;
     cel4.innerHTML = proveedor;
+    cel5.innerHTML = 
+    `<td>
+        <a onclick="borrarProducto()" type="submit" data-toggle="popover" data-trigger="hover"
+        data-content="Aca iria la lógica" data-original-title="Logica">
+            <i class="fas fa-trash-alt h2" style="margin: 30% 30% 30% 30%;"></i>
+        </a>
+    </td>`;
 }
 
 function agregarProducto() {
@@ -34,13 +42,22 @@ function agregarProducto() {
                 </select>
             </div>
         </div>
-    <div style="display: inline-block; width: 15%;">
-        <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
-    </div>
-        <div class="col text-center">
-            <a onclick="agregarProducto()" type="submit" data-toggle="popover" data-trigger="hover" title="Logica" data-content="Aca iria la lógica" style="margin-top: 8px;">
-                <i class="fas fa-plus-circle h1"></i>
-            </a>
+        <div style="display: inline-block; width: 15%;">
+            <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
         </div>
+        <a onclick="borrarProducto()" type="submit" data-toggle="popover" data-trigger="hover" title="Logica" data-content="Aca iria la lógica" style="margin: 8px 0px 0px 15px;">
+            <i class="fas fa-trash-alt h1"></i>
+        </a>
     </div>`);
+}
+
+function borrarProducto(){
+    let eliminar = confirm("Está seguro que desea eliminar este producto?");
+    if(eliminar){
+        // Codigo que elimina la fila
+    }
+}
+
+function ordenDeCompraCreada(){
+    alert("Orden de compra creada correctamente");
 }
