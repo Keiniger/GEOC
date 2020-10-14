@@ -4,13 +4,13 @@ body {
 
 ::-moz-selection {
     /* Code for Firefox */
-    color: black;
-    background: lightgray;
+    color: black !important;
+    background: lightgray !important;
 }
 
 ::selection {
-    color: black;
-    background: lightgray;
+    color: black !important;
+    background: lightgray !important;
 }
 
 h1{
