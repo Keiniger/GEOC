@@ -4,11 +4,11 @@ $(document).ready(function () {
 
 function agregarFila() {
     var botonAgregar = document.getElementById('botonAgregar');
-    var codigo = document.getElementById('productoCodigo').value;
-    var descripcion = document.getElementById('productoDescripcion').value;
-    var proveedor = document.getElementById('productoProveedor').value;
-    var table = document.getElementsByTagName('table')[0];
-    var newRow = table.insertRow(table.rows.length);
+    var codigo       = document.getElementById('productoCodigo').value;
+    var descripcion  = document.getElementById('productoDescripcion').value;
+    var proveedor    = document.getElementById('productoProveedor').value;
+    var table        = document.getElementsByTagName('table')[0];
+    var newRow       = table.insertRow(table.rows.length);
 
     var cel1 = newRow.insertCell(0);
     var cel2 = newRow.insertCell(1);
@@ -59,5 +59,8 @@ function borrarProducto(){
 }
 
 function ordenDeCompraCreada(){
-    alert("Orden de compra creada correctamente");
+    let ordenCreada = confirm("Orden de compra creada correctamente");
+    if(ordenCreada){
+        location.reload();
+    }
 }
