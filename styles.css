@@ -66,3 +66,17 @@ option[value],
     background-color:#3a3f44 !important;
     color: lightgray !important;
 }
+
+.flexContainer1 {
+    margin-top: 2em;
+    display: flex;
+    
+}
+
+@media only screen and (max-width: 992px) { 
+    .flexContainer1 {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+    }
+}

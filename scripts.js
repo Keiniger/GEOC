@@ -2,13 +2,17 @@ $(document).ready(function () {
     $('[data-toggle="popover"]').popover();
 });
 
+var idFila = 4;
 function agregarFila() {
+
     var botonAgregar = document.getElementById('botonAgregar');
     var codigo       = document.getElementById('productoCodigo').value;
     var descripcion  = document.getElementById('productoDescripcion').value;
     var proveedor    = document.getElementById('productoProveedor').value;
     var table        = document.getElementsByTagName('table')[0];
     var newRow       = table.insertRow(table.rows.length);
+    
+    newRow.id = idFila;
 
     var cel1 = newRow.insertCell(0);
     var cel2 = newRow.insertCell(1);
@@ -21,17 +25,19 @@ function agregarFila() {
     cel3.innerHTML = 0;
     cel4.innerHTML = proveedor;
     cel5.innerHTML = 
-    `<td>
-        <a onclick="borrarProducto()" type="submit" data-toggle="popover" data-trigger="hover"
-        data-content="Aca iria la lógica" data-original-title="Logica">
+    `<td id=${idFila}>
+        <a onclick="borrar(${idFila})" type="submit">
             <i class="fas fa-trash-alt h2" style="margin: 30% 30% 30% 30%;"></i>
         </a>
     </td>`;
+
+    idFila++;
 }
 
+var idProducto = 0;
 function agregarProducto() {
     document.getElementById('nuevoProducto').insertAdjacentHTML('beforebegin', `
-    <div style="display: flex; align-items: center; flex-wrap: wrap;">
+    <div id="${idProducto}" style="display: flex; align-items: center; flex-wrap: wrap;">
         <div class="col" style="flex-grow: 10;">
             <div class="form-group">
                 <select class="form-control" id="sel1" placeholder="Categoría" width="50%">
@@ -45,16 +51,17 @@ function agregarProducto() {
         <div style="display: inline-block; width: 15%;">
             <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
         </div>
-        <a onclick="borrarProducto()" type="submit" data-toggle="popover" data-trigger="hover" title="Logica" data-content="Aca iria la lógica" style="margin: 8px 0px 0px 15px;">
+        <a onclick="borrar(${idProducto})" type="submit" data-toggle="popover" data-trigger="hover" title="Logica" data-content="Aca iria la lógica" style="margin: 8px 0px 0px 15px;">
             <i class="fas fa-trash-alt h1"></i>
         </a>
     </div>`);
+    idProducto++;
 }
 
-function borrarProducto(){
+function borrar(_id){
     let eliminar = confirm("Está seguro que desea eliminar este producto?");
     if(eliminar){
-        // Codigo que elimina la fila
+        document.getElementById(_id).remove();
     }
 }
 
@@ -62,5 +69,14 @@ function ordenDeCompraCreada(){
     let ordenCreada = confirm("Orden de compra creada correctamente");
     if(ordenCreada){
         location.reload();
+    }
+}
+
+var x = window.matchMedia("(max-width: 992px)")
+function mediaQuery(x) {
+    if (x.matches) { // If media query matches
+      document.getElementById("añadir").className = "col";
+    } else {
+      document.getElementById("añadir").className = "row";
     }
 }
